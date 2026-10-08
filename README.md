@@ -116,21 +116,11 @@ With PostZen, the skills can:
 - **Set visibility** to anyone or connections only, title a document or video, reshare a post with your text on top, or turn off the link card.
 - **Run a queue:** posts take the next free slot in a weekly schedule you set once.
 
-Not available yet, waiting on LinkedIn's approval:
-
-- Analytics of any kind, so `/li-audit` still runs on pasted numbers and `/li-plan`'s posting times are general, not personalised.
-- Reading or replying to comments and reactions.
-- The inbox, DMs and invites.
-- First comments. If a post's link belongs in the first comment, you add it by hand.
-- Posting to a company page. Everything goes to your personal profile.
-
-Not offered by this route: mentions (an `@Name` stays plain text), polls, articles and newsletters, Word or PowerPoint documents (export to PDF), and editing or deleting a post after it is published.
-
 ## The fine print
 
 **The five checks are local heuristics, not detector APIs.** They are modelled on the signals public detectors look for, and they run entirely on your machine. They are not GPTZero, Originality, Copyleaks, Winston or Turnitin, they don't call those services, and they can't promise their verdicts. Fixing what they measure tends to move those numbers, because both are measuring the same underlying things. That is the whole claim. Nobody can honestly sell "undetectable".
 
-**The invisible-character pass is real and narrow.** It removes the zero-width and format characters that end up in generated text and survive a copy-paste. That is a genuine, checkable fingerprint. It isn't a claim about defeating cryptographic watermarking, and this repo doesn't make one.
+**The invisible-character pass is real and narrow.** It removes the zero-width and format characters that end up in generated text and survive a copy-paste. That is a genuine, checkable fingerprint.
 
 **Nothing here fabricates.** No invented metrics, clients or outcomes go out under your name. If a draft needs a number you haven't given, it comes back with `{{your number}}` in it and a flag, every time.
 
@@ -151,7 +141,7 @@ templates/voice.md               your voice profile. Fill this in first.
 
 ## Credits
 
-This pack is a fork of Jake Schincariol's [linkedin-agent-skill](https://github.com/Jakeschincariol/linkedin-agent-skill), licensed under MIT. He wrote the original eleven skills, the hook formulas, the humanizer and the profile rubric.
+This pack is a fork of Jake Schincariol's [linkedin-agent-skill](https://github.com/Jakeschincariol/linkedin-agent-skill), licensed under MIT.
 
 PostZen added `/li-publish` and the publishing layer across the other skills.
 
