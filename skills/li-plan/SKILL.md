@@ -58,6 +58,43 @@ hooks work, they are polishing the wrong thing, and you should say so.
 Anchor the times to their audience's timezone, not the user's, if those
 differ.
 
+### With PostZen connected
+
+If the PostZen MCP tools are in this session, two things improve and one
+does not.
+
+**What is already booked.** `listPosts({ platform: "linkedin", accountId,
+status: "scheduled", sortBy: "scheduledFor" })` shows every scheduled post,
+queued ones included, so the plan does not double up a day. Only posts
+created in PostZen appear here.
+
+**Queue slots.** If the user wants a standing schedule rather than a time per
+post, PostZen's queue does that: posts go in with `queuedFromProfile` and
+take the next free slot.
+
+- `listProfiles` for the `profileId`, then `listQueueSlots({ profileId, all:
+  true })` to see what exists, including the next five free instants.
+- `createQueueSlot({ profileId, timezone: "America/New_York", slots: [{
+  dayOfWeek: 2, time: "08:15" }, { dayOfWeek: 4, time: "08:00" }, {
+  dayOfWeek: 5, time: "08:30" }], name: "LinkedIn" })` creates a whole queue,
+  not one slot. `dayOfWeek` is 0 for Sunday, `timezone` is an IANA name. The
+  first queue on a profile becomes its default. Show the slots with the
+  timezone and get a yes before creating.
+- `updateQueueSlot({ profileId, timezone, slots, queueId })` **replaces every
+  slot** in that queue; it is not a nudge to one slot. Send the full list
+  each time. Posts already placed keep their times unless
+  `reshuffleExisting: true`.
+- `deleteQueueSlot` **without a `queueId` deletes every queue on the
+  profile.** Never call it without one, and confirm with the user first.
+- `previewQueue({ profileId })` returns the upcoming free instants, not the
+  posts in them, and reserves nothing. For posts, use `listPosts` as above.
+
+**What does not change: the timing.** PostZen has no LinkedIn engagement data
+yet (analytics are waiting on LinkedIn's approval), so it cannot tell you when
+this account's audience responds. `getBestTimeToPost` will most likely come
+back empty for LinkedIn. The times in the plan are still the general default
+above, and say so. They are not personalised.
+
 ## Who to engage with
 
 Build a list of 10, split three ways:
@@ -91,4 +128,5 @@ Say "write Tuesday" and I will draft it.
 ```
 
 Write the plan to `~/.claude/linkedin/plan.md` so the other skills can read it.
-Nothing is scheduled or posted anywhere - this is a plan, and the user runs it.
+Writing a time into the plan schedules nothing. The user runs the plan, or
+`/li-publish` schedules each post once it is written and approved.

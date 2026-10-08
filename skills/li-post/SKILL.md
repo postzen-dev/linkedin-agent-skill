@@ -70,9 +70,27 @@ post at:   Tuesday 8:15am ET (from your plan)
 Reply "yes" to log it, or tell me what to change.
 ```
 
-**5. Never publish.** This skill produces text. The user posts it. On "yes",
-append the post to `~/.claude/linkedin/log.md` with the date, the hook used
-and the first line, so `/li-audit` has a history to work from later.
+**5. Never publish from here.** This skill produces text. On "yes", append
+the post to `~/.claude/linkedin/log.md` with the date, the hook used and the
+first line, so `/li-audit` has a history to work from later. Then the user
+posts it, or `/li-publish` does (below).
+
+## Posting it through PostZen
+
+If the PostZen MCP tools are in this session (`listAccounts`, `createPost`),
+offer `/li-publish` after the block: it publishes, schedules or queues the
+post on the user's personal profile after one more explicit yes to the exact
+text, account, visibility and time. Two things change on that path:
+
+- **The first comment is manual.** PostZen cannot post first comments yet
+  (waiting on LinkedIn's approval). If the post's link lives in the first
+  comment, the user adds it by hand once the post is live, and the gate says
+  so.
+- **No tags.** `@Name` goes out as plain text, so a post that tags people is
+  a manual post.
+
+`/li-publish` adds the PostZen post id and the URL to the log line this skill
+wrote. Without PostZen, the user pastes the block, as before.
 
 ## Rules that make the difference
 

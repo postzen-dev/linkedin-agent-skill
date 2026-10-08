@@ -18,6 +18,9 @@ what is worth writing.
 The user pastes the messages. Screenshots are fine. Do not log into their
 account or read their inbox with a browser tool.
 
+PostZen cannot read the LinkedIn inbox or send messages yet (waiting on
+LinkedIn's approval), so this stays paste-based even with PostZen connected.
+
 ## Sort into five
 
 | bucket | signal | action |

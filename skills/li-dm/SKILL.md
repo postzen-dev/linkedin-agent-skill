@@ -80,4 +80,6 @@ Then stop. A third follow-up converts nobody and costs the relationship.
 
 The invite note with its character count, the first message, and both
 follow-ups with the day they go out. All humanized through `/li-human`. The
-user sends every one of them by hand.
+user sends every one of them by hand. PostZen cannot send LinkedIn invites or
+DMs yet (waiting on LinkedIn's approval), so that holds with PostZen
+connected too.

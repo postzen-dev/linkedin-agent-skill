@@ -68,4 +68,14 @@ seconds. Then the accompanying **post text** - a carousel still needs 2-3
 lines above it, which is the actual hook in the feed. Run both through
 `/li-human`. Then build the PDF only if the user approves the copy.
 
-Nothing is uploaded to LinkedIn. The user posts the PDF themselves.
+This skill uploads nothing. Two ways out:
+
+- **PostZen connected** (the `createPost` and `createMediaPresign` tools are
+  in this session): export the PDF and offer `/li-publish`. It goes up as a
+  document post: the PDF through `createMediaPresign`, the post text as
+  `content`, and a `documentTitle` (up to 200 characters, usually the cover
+  line), because without one LinkedIn shows the filename. PDF only, up to
+  100 MB; LinkedIn's 300-page cap is not checked for you, which a 12-slide
+  deck will never hit. The user confirms the full post there before anything
+  goes out.
+- **Not connected:** the user posts the PDF by hand, as before.

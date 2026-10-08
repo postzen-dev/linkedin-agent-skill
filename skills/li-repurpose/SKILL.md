@@ -69,3 +69,28 @@ Say "write Tuesday" and I will draft it.
 Then draft on request, one at a time, each through `/li-post` and `/li-human`.
 Do not dump four finished posts at once - they will all sound the same, and
 the user will edit none of them.
+
+## Scheduling the week through PostZen
+
+When the posts are written and approved and the PostZen MCP tools are in this
+session, offer to schedule the week through `/li-publish`. Two ways to place
+them:
+
+- **Explicit times.** Each post gets its own `scheduledFor` with the user's
+  timezone offset, straight off the week above.
+- **The queue.** Each post goes in with `queuedFromProfile`, and PostZen
+  gives it the profile's next free slot. This needs a queue with slots, which
+  `/li-plan` sets up. Never fetch a slot with `getNextQueueSlot` and pass it
+  back as `scheduledFor`.
+
+**One confirmation covers the whole list**, and it lists everything: each
+post's day and time with timezone, format, account name, visibility, first
+line, any media file, and anything left to do by hand (a first-comment link,
+say). In queue mode the time is not fixed until the call returns, so list the
+slots `previewQueue({ profileId })` shows, say that each post takes the next
+free one at send time, and report the `scheduledFor` that comes back. Show
+it, get the yes, then `/li-publish` sends them one call at a time and checks
+each `platforms[].status` before moving on.
+
+If anything in the list changes after the yes, the yes is spent. Show the
+list again.

@@ -78,3 +78,5 @@ remaining points need (usually recommendations, a real banner and posting
 history, none of which a rewrite can create).
 
 Nothing is saved to LinkedIn by this skill. The user pastes each section in.
+That stays true with PostZen connected: PostZen publishes posts, it does not
+edit profiles.

@@ -20,6 +20,9 @@ skill sorts before it writes.
 The user pastes the comments, ideally with names and roles. Screenshots are
 fine. Do not scrape the thread with a browser tool.
 
+PostZen cannot read or reply to LinkedIn comments yet (waiting on LinkedIn's
+approval), so this skill stays paste-based even with PostZen connected.
+
 ## Triage first
 
 Sort every comment into one of five buckets and say the count out loud:

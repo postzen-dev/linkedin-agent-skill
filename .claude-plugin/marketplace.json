@@ -1,18 +1,18 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "linkedin-agent-skill",
-  "description": "The LinkedIn agent skill pack for Claude",
+  "name": "postzen-linkedin",
+  "description": "The LinkedIn agent skill pack for Claude, with publishing and scheduling through PostZen",
   "owner": {
-    "name": "Jake Schincariol",
-    "url": "https://opusjake.ai"
+    "name": "PostZen",
+    "url": "https://www.postzen.dev"
   },
   "plugins": [
     {
-      "name": "linkedin-agent",
-      "description": "Eleven Claude skills that run a LinkedIn account, including a humanizer that strips the AI fingerprint and scores the draft on a five-check panel.",
+      "name": "postzen-linkedin",
+      "description": "Twelve Claude skills that run a LinkedIn account: hook formulas, a humanizer, a profile score, a weekly plan, and publishing and scheduling to your personal profile through the PostZen MCP server. Nothing is posted until you say yes.",
       "source": "./",
       "category": "productivity",
-      "homepage": "https://opusjake.ai/r/linkedin-agent"
+      "homepage": "https://github.com/postzen-dev/linkedin-agent-skill"
     }
   ]
 }

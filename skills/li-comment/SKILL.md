@@ -89,3 +89,6 @@ visible and it looks like what it is.
 Do not auto-post. Do not use a browser tool to publish comments on the user's
 behalf. Automated posting and scraping both violate LinkedIn's User Agreement
 and put the account at risk. This skill writes the comment. The user posts it.
+
+PostZen cannot comment on LinkedIn yet (waiting on LinkedIn's approval), so
+that holds with PostZen connected too.

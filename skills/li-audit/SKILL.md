@@ -25,6 +25,10 @@ Ask for whichever the user has:
 Also read `~/.claude/linkedin/log.md` if it exists, since it records which
 hook formula each post used.
 
+PostZen cannot read LinkedIn analytics yet (waiting on LinkedIn's approval),
+so the numbers still come from the user, even with PostZen connected. The
+log's PostZen post ids and URLs help match each pasted row to its post.
+
 ## What to actually measure
 
 Raw impressions are the least useful number on the page, because they are
