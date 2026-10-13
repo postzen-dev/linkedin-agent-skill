@@ -37,22 +37,6 @@ Whichever route you used, run `/mcp`, select `postzen` and choose Authenticate. 
 
 Project-local instead of global: copy the same folders into your repo's `.claude/skills/`. No Claude Code at all? Paste any single `SKILL.md` at the top of a chat and it runs as a mode. You lose the two Python tools, which are most of the point of `/li-human`, and PostZen, but the rest works.
 
-### Codex
-
-Codex reads the same plugin. Add this repo as a marketplace, install the plugin, then sign in to PostZen:
-
-```bash
-codex plugin marketplace add postzen-dev/linkedin-agent-skill
-codex plugin add postzen-linkedin@postzen-linkedin
-codex mcp login postzen
-```
-
-That installs every skill and registers the PostZen MCP server. Once the marketplace is added, the plugin also shows up under it in the Plugins Directory of the ChatGPT or Codex desktop app. Call a skill with `$li-...` (for example `$li-post`) or just describe the task.
-
-### ChatGPT
-
-ChatGPT accepts the same `SKILL.md` files. Go to **Plugins**, open the **Skills** tab, choose **Create**, then **Upload from your computer**, and upload a skill from `skills/`. Skills in ChatGPT are available on eligible Business, Enterprise, Healthcare and Edu plans. The writing works there. We have not tested whether ChatGPT runs the two Python scripts; Claude Code and Codex do. Publishing to LinkedIn from ChatGPT also needs PostZen as a custom MCP server (**Plugins**, then **+**, then **Add custom MCP server**, URL `https://mcp.postzen.dev/mcp`), if your plan allows custom MCP servers.
-
 **Connect LinkedIn:** Say "connect my LinkedIn". `/li-publish` asks PostZen for a connect link. Open it and approve on LinkedIn. It connects your personal profile. PostZen's free plan covers 2 connected accounts and 20 posts a month.
 
 PostZen is optional. Every writing skill works without it, and you paste the result yourself.
