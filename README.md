@@ -10,16 +10,15 @@ The humanizer is what makes the rest usable. It strips em dashes, stock phrases 
 
 ## Install
 
-Install the plugin in Claude Code:
+Paste this into Claude:
 
 ```text
-/plugin marketplace add postzen-dev/linkedin-agent-skill
-/plugin install postzen-linkedin
+https://github.com/postzen-dev/linkedin-agent-skill
+
+Install this skill and the PostZen MCP server, then confirm /li-post works.
 ```
 
-The plugin registers the PostZen MCP server. Run `/mcp`, select `postzen`, and choose Authenticate. Sign in on the PostZen page that opens in your browser. Select **Read & Write** to enable publishing.
-
-Or copy the skills by hand:
+Or do it yourself, in Claude Code:
 
 ```bash
 git clone https://github.com/postzen-dev/linkedin-agent-skill.git
@@ -27,11 +26,16 @@ cp -r linkedin-agent-skill/skills/li-* ~/.claude/skills/
 claude mcp add --transport http postzen https://mcp.postzen.dev/mcp
 ```
 
-Then run `/mcp`, select `postzen`, and authenticate.
+Or as a plugin, which registers the PostZen MCP server for you:
 
-For a project-local install, copy the same folders into your repo's `.claude/skills/`.
+```text
+/plugin marketplace add postzen-dev/linkedin-agent-skill
+/plugin install postzen-linkedin
+```
 
-You can also paste a single `SKILL.md` at the top of a chat to use it as a mode. The writing works without Claude Code, but the two Python tools and PostZen are unavailable, and the Python tools are most of the point of `/li-human`.
+Whichever route you used, run `/mcp`, select `postzen` and choose Authenticate. Sign in on the PostZen page that opens in your browser and pick **Read & Write** so Claude can publish.
+
+Project-local instead of global: copy the same folders into your repo's `.claude/skills/`. No Claude Code at all? Paste any single `SKILL.md` at the top of a chat and it runs as a mode. You lose the two Python tools, which are most of the point of `/li-human`, and PostZen, but the rest works.
 
 ### Codex
 
