@@ -81,7 +81,7 @@ part people reply to.
 If the user wants an engagement round, ask for the 5-10 posts as pasted text
 in one message, return one comment each in a single block, and keep a running
 note of who they have already commented on this week in
-`~/.claude/linkedin/log.md`. Commenting on the same three people every day is
+`~/.linkedin-agent/log.md`. Commenting on the same three people every day is
 visible and it looks like what it is.
 
 ## Never

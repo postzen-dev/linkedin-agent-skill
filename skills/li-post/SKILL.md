@@ -16,11 +16,13 @@ posted it.
 
 ## Before you write
 
-1. Read `~/.claude/linkedin/voice.md` if it exists. That file is the user's
-   voice profile: how they talk, what they never say, who they are talking to.
-   If it does not exist, ask for **three of their own past posts**, infer the
-   voice from those, and write the file. Do not skip this and do not invent a
-   voice. A post in the wrong voice is worse than no post.
+1. Read `~/.linkedin-agent/voice.md` if it exists. Older installs kept it in
+   `~/.claude/linkedin/`; read it from there if the new folder is missing.
+   That file is the user's voice profile: how they talk, what they never say,
+   who they are talking to. If it does not exist, ask for **three of their own
+   past posts**, infer the voice from those, and write the file. Do not skip
+   this and do not invent a voice. A post in the wrong voice is worse than no
+   post.
 2. Read `hooks.json` in this folder. All 21 formulas, with templates, filled
    examples, what each is for, and how each one usually gets ruined.
 3. If the idea is thin - "post about AI" - do not pad it. Ask one batched
@@ -71,7 +73,7 @@ Reply "yes" to log it, or tell me what to change.
 ```
 
 **5. Never publish from here.** This skill produces text. On "yes", append
-the post to `~/.claude/linkedin/log.md` with the date, the hook used and the
+the post to `~/.linkedin-agent/log.md` with the date, the hook used and the
 first line, so `/li-audit` has a history to work from later. Then the user
 posts it, or `/li-publish` does (below).
 

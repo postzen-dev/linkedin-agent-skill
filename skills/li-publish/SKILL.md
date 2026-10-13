@@ -311,7 +311,7 @@ to them.
 ## Step 7: log it
 
 On `published` or `scheduled`, append one line to
-`~/.claude/linkedin/log.md`. `/li-audit` reads it to match hook formulas to
+`~/.linkedin-agent/log.md`. `/li-audit` reads it to match hook formulas to
 results and `/li-plan` reads it to avoid repeating a theme:
 
 ```

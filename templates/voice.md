@@ -1,8 +1,12 @@
 # voice.md
 
-Copy this to `~/.claude/linkedin/voice.md` and fill it in. Every skill in the
+Copy this to `~/.linkedin-agent/voice.md` and fill it in. Every skill in the
 pack reads it. Ten minutes here is the difference between drafts you post and
 drafts you rewrite.
+
+Older installs used `~/.claude/linkedin/`. The skills still read `voice.md`
+from there, but move the folder to `~/.linkedin-agent/` so the log and plan
+land in one place.
 
 If you would rather not fill it in by hand, paste three of your own posts into
 Claude and say "write my voice.md from these". That works better than guessing

@@ -1,7 +1,7 @@
 {
   "name": "postzen-linkedin",
   "description": "Twelve Claude skills that run a LinkedIn account, with publishing and scheduling to your personal profile through the PostZen MCP server: posts off 21 hook formulas, comments, replies, profile score, weekly plan, DMs, inbox triage, PDF carousels, repurposing, audits, a humanizer that strips the AI fingerprint, and a publish skill that verifies the post went out. Nothing is posted until you say yes.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": {
     "name": "PostZen",
     "url": "https://www.postzen.dev"
@@ -9,5 +9,15 @@
   "homepage": "https://github.com/postzen-dev/linkedin-agent-skill",
   "repository": "https://github.com/postzen-dev/linkedin-agent-skill",
   "license": "MIT",
-  "keywords": ["linkedin", "postzen", "mcp", "content", "writing", "humanizer", "social", "marketing", "publishing"]
+  "keywords": [
+    "linkedin",
+    "postzen",
+    "mcp",
+    "content",
+    "writing",
+    "humanizer",
+    "social",
+    "marketing",
+    "publishing"
+  ]
 }
