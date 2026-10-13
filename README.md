@@ -10,7 +10,7 @@ The humanizer is what makes the rest usable. It strips em dashes, stock phrases 
 
 ## Install
 
-Paste this into Claude:
+Paste this into Claude or Codex:
 
 ```text
 https://github.com/postzen-dev/linkedin-agent-skill
