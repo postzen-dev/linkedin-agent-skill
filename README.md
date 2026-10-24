@@ -1,6 +1,6 @@
 # The LinkedIn agent skill
 
-Twelve Claude skills for running a LinkedIn account. Connect [PostZen](https://www.postzen.dev) to publish and schedule posts on your personal profile through LinkedIn's official API.
+Twelve Claude skills for running a LinkedIn account. Connect [PostZen](https://www.postzen.dev/?utm_source=github&utm_medium=skill&utm_campaign=linkedin-agent-skill) to publish and schedule posts on your personal profile through LinkedIn's official API.
 
 The skills write posts from 21 hook formulas, draft comments for other people's posts and replies for the thread under yours, score your profile out of 100, and plan the week. `/li-publish` sends a finished post to LinkedIn and checks that it went out.
 
